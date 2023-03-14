@@ -25,27 +25,24 @@
 			</hgroup>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<ul class="nav-menu">
-					<li>
-						<a href="/index.html">首页</a>
-					</li>
-					<li>
-						<a href="/index.html?cate=1">服务器</a>
-					</li>
-					<li>
-						<a href="/index.html?cate=2">PHP</a>
-					</li>
-					<li>
-						<a href="/index.html?cate=3">前端</a>
-					</li>
-					<li>
-						<a href="/index.html?cate=4">Thinkphp</a>
-					</li>
-					<li>
-						<a href="/index.html?cate=5">Layui</a>
-					</li>
-					<li>
-						<a href="/index.html?cate=6">小程序</a>
-					</li>
+                    <?php
+                        $menu = [
+                            "首页",
+                            "服务器",
+                            "PHP",
+                            "前端",
+                            "Thinkphp",
+                            "Layui",
+                            "小程序"
+                        ];
+                    ?>
+                    <?php
+                        foreach ($menu as $v) {
+                            echo "<li>";
+                            echo "<a href=\"/index.html\">$v</a>";
+                            echo "</li>";
+                        }
+                    ?>
 				</ul>
 			</nav>
 		</header>
