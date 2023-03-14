@@ -55,9 +55,18 @@
 				<div id="content" role="main">
 					<article>
 						<header class="entry-header">
-							<h1 class="entry-title"><a href="/details.html" title="构建Nginx和PHP镜像" rel="bookmark">构建Nginx和PHP镜像</a></h1>
+							<h1 class="entry-title">
+								Git 时光穿梭机-版本回退
+							</h1>
 						</header>
-						<div class="entry-content">构建Nginx和PHP镜像</div>
+						<div class="entry-content ql-editor" id="md-editor" style="padding: 0;">
+							在平时的工作中，经常会遇到 git 版本回退的问题，这里总结一下遇到的情况供需要的时候查询。
+							1）当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令`git checkout -- file`
+							2）当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步。第一步用命令`git reset HEAD file`就回到了场景 1，第二步按场景 1 操作。
+							3）已经提交了不合适的修改到版本库时，想要撤销本次提交，使用`git reset --hard commit_id`就可以回到版本号为 commit_id 的那个版本了(不过前提是没有推送到远程库)。
+							4）如果你不仅提交了不合适的版本，并且还推送到了远程，这种情况可以先按照第 3 步的操作回退到合适的版本，然后使用本地的版本强行覆盖远程的分支，使用`git push -f`即可。
+						</div>
+			
 						<footer class="entry-meta">
 							发布于 
 							<a href="/index.html?time=2020-10-02" title="2020-10-02" rel="bookmark">
@@ -66,23 +75,10 @@
 							<a href="/index.html?cate=4" title="查看 Linux中的全部文章" rel="category">Linux</a> 分类
 						</footer>
 					</article>
-				</div>
-				<div class="page">
-					<nav>
-						<ul class="pagination">
-							<li class="page-item disabled" aria-disabled="true" aria-label="&laquo; 上一页">
-								<span class="page-link" aria-hidden="true">&lsaquo;</span>
-							</li>
-							<li class="page-item active" aria-current="page">
-								<span class="page-link">1</span>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="/index.html?page=2">2</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="/index.html?page=2" rel="next" aria-label="下一页 &raquo;">&rsaquo;</a>
-							</li>
-						</ul>
+	
+					<nav class="nav-single">
+						<div class="prev">上一篇：<a href="/details.html">Linux 输入输出重定向与管道</a></div>
+						<div class="prev">下一篇：<a href="/details.html">构建Nginx和PHP镜像</a></div>
 					</nav>
 				</div>
 			</div>
@@ -114,11 +110,11 @@
 					<ul>
 						<li>
 							<font style="color:#7a7a7a;">[0]</font>&nbsp;
-							<a href="/details.html?id=20" title="构建Nginx和PHP镜像">构建Nginx和PHP镜像</a>
+							<a href="/details.html" title="构建Nginx和PHP镜像">构建Nginx和PHP镜像</a>
 						</li>
 						<li>
 							<font style="color:#7a7a7a;">[1]</font>&nbsp;
-							<a href="/details.html?id=10" title="Mysql 触发器基础">Mysql 触发器基础</a>
+							<a href="/details.html" title="Mysql 触发器基础">Mysql 触发器基础</a>
 						</li>
 					</ul>
 				</aside>
@@ -128,11 +124,11 @@
 					<ul>
 						<li>
 							<font style="color:#7a7a7a;">[0]</font>&nbsp;
-							<a href="/details.html?id=20" title="构建Nginx和PHP镜像">构建Nginx和PHP镜像</a>
+							<a href="/details.html" title="构建Nginx和PHP镜像">构建Nginx和PHP镜像</a>
 						</li>
 						<li>
 							<font style="color:#7a7a7a;">[1]</font>&nbsp;
-							<a href="/details.html?id=10" title="PHP常见的魔术常量">PHP常见的魔术常量</a>
+							<a href="/details.html" title="PHP常见的魔术常量">PHP常见的魔术常量</a>
 						</li>
 					</ul>
 				</aside>
