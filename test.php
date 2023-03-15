@@ -24,5 +24,5 @@
         }
     }
 
-    $info = new teacher("王五", 35);
+    $info = new teacher("王五无无", 35);
     echo $info->info();
